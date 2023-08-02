@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        app:title="Display Name"
+        app:useSimpleSummaryProvider="true"
+        app:key="display_name"/>
+
+    <ListPreference
+        app:defaultValue="g"
+        app:entries="@array/reply_entries"
+        app:entryValues="@array/reply_values"
+        app:key="color"
+        app:title="Display Color"
+        app:useSimpleSummaryProvider="true" />
+
+    <SwitchPreferenceCompat
+        app:key="surname"
+        app:title="Show Surname" />
+    <EditTextPreference
+        app:dependency="surname"
+        app:title="Display Surname"
+        app:key="surname_text"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>
